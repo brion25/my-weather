@@ -7,4 +7,13 @@ node_js:
 before_script:
   - "npm install -g nsp"
 script:
-  - "npm run ci"
+  - "npm run test"
+  - "nsp check"
+  - "npm run build"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $githubToken
+  local_dir: build
+  on:
+    branch: master

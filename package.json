@@ -12,7 +12,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "ci": "npm run test && nsp check"
   },
   "devDependencies": {
     "flow-bin": "^0.74.0"
