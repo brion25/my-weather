@@ -23,13 +23,13 @@ class HomePage extends React.Component<Props, State> {
       longitude: coords.longitude,
       accuracy: coords.accuracy,
     }, this.initializeMap);
-    console.log(coords)
   }
 
   initializeMap() {
     const { latitude, longitude, accuracy } = this.state;
     this.map = LeafletMap.getMap(MAP_ID ,latitude,longitude, accuracy);
     this.map.withStreets();
+    this.map.showLayers();
   }
 
   componentDidMount() {

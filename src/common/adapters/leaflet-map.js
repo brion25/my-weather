@@ -1,3 +1,5 @@
+import { MAP_LAYER_CONFIG } from '../utils/constants'
+
 let leafletMap = null
 
 type MapArgs = {
@@ -10,7 +12,6 @@ type MapArgs = {
 
 class LeafletMap {
   static getMap(...mapArgs: MapArgs) {
-    console.log(mapArgs)
     if (leafletMap) {
       return leafletMap;
     }
@@ -30,6 +31,17 @@ class LeafletMap {
       .openPopup();
 
     this.withStreets = this.withStreets.bind(this)
+  }
+
+  showLayers() {
+    if (!this.showingLayers) {
+      this.showingLayers = true;
+      window.L.control.layers({}, {
+        precipitation: window.L.OWM.precipitationClassic(MAP_LAYER_CONFIG),
+        rain: window.L.OWM.rainClassic(MAP_LAYER_CONFIG),
+        temperature: window.L.OWM.temperature(MAP_LAYER_CONFIG),
+      }, {collapsed: false}).addTo(this.map)
+    }
   }
 
   withStreets() {
