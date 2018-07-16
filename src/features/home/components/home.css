@@ -10,35 +10,35 @@
   height: 100%;
   width: 100%; }
 
-.home .leaflet-top.leaflet-left {
-  margin-top: 3rem; }
-
-.home .owm-legend-item {
-  margin-bottom: 3rem; }
-
-.home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
-  width: 100vw;
-  margin: 0;
-  padding: 0; }
-  .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays {
-    display: flex;
-    flex-direction: row; }
-    .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label {
-      flex: 1;
-      padding: 0.5rem 1rem;
-      text-transform: capitalize;
-      font-size: 1rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden; }
-      .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label:nth-child(2) {
-        flex: 0.9; }
-      .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label input {
-        width: 0;
-        margin: 0; }
-        .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label input:checked {
-          position: absolute;
-          width: 100%;
-          top: 100%;
-          left: 0;
-          outline: 0.5rem solid black; }
+@media (max-width: 61.24em) {
+  .home .leaflet-top.leaflet-left {
+    margin-top: 3rem; }
+  .home .owm-legend-item {
+    margin-bottom: 3rem; }
+  .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+    width: 100vw;
+    margin: 0;
+    padding: 0; }
+    .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays {
+      display: flex;
+      flex-direction: row; }
+      .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer; }
+        .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label:nth-child(2) {
+          flex: 0.9; }
+        .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label input {
+          width: 0;
+          margin: 0; }
+          .home .leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control .leaflet-control-layers-overlays label input:checked {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            outline: 0.5rem solid black; } }

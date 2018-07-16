@@ -5,7 +5,7 @@ before_script:
   - "npm install -g nsp"
 script:
   - "npm run test"
-  - "nsp check"
+  - "nsp check --threshold 4"
   - "npm run build"
 deploy:
   provider: pages

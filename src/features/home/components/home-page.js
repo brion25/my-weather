@@ -1,6 +1,8 @@
 import './home.css'
 import React from 'react'
 
+import BasicWeather from './basic-weather'
+
 import { MAP_ID } from '../../../common/utils/constants'
 import LeafletMap from '../../../common/adapters/leaflet-map'
 
@@ -46,6 +48,9 @@ class HomePage extends React.Component<Props, State> {
         <div className="home__map-wrapper">
           <div id={MAP_ID} className="home__map"></div>
           <div className="home__position-accuracy">{accuracy}</div>
+        </div>
+        <div className="home__basic-wrapper">
+          <BasicWeather/>
         </div>
       </div>
     );
